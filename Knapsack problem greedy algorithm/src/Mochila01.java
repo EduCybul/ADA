@@ -24,7 +24,7 @@ public class Mochila01 {
         });
         //Hasta aqui los objetos estan ordenados por el valor de su ratio.
         //Lo iremos cogiendo por mayor ratio.
-
+        //Segun vayan entrando en la mochila si el peso maximo lo permite
         int i=0;
         int capacidad = pesoMax;
         while( i<lista.length && lista[i].peso<= capacidad ){
@@ -57,8 +57,8 @@ public class Mochila01 {
 
         Objeto[] lista = {new Objeto(10,60), new Objeto(20,100), new Objeto(30,120), new Objeto(15,70)};
         int pesoMax=50;
-       // System.out.print(lista);
 
+        //array solucion que nos dira que objetos entraran en la mochila final.
         int[] sol = Solución(lista, pesoMax);
         for(int i=0; i< sol.length; i++){
             System.out.print("["+sol[i]+"] ");
